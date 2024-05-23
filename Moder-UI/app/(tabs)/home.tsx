@@ -9,7 +9,7 @@ export default function Home() {
         alignItems: 'center'
       }}
     >
-      <Text>Welcome to home</Text>
+      <Text>Welcome to home tabs</Text>
     </View>
   )
 }

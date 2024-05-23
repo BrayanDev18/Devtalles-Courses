@@ -1,16 +1,18 @@
-import bookmark from "../assets/icons/bookmark.png";
-import home from "../assets/icons/home.png";
-import plus from "../assets/icons/plus.png";
-import profile from "../assets/icons/profile.png";
-import leftArrow from "../assets/icons/left-arrow.png";
-import menu from "../assets/icons/menu.png";
-import search from "../assets/icons/search.png";
-import upload from "../assets/icons/upload.png";
-import rightArrow from "../assets/icons/right-arrow.png";
-import logout from "../assets/icons/logout.png";
-import eyeHide from "../assets/icons/eye-hide.png";
-import eye from "../assets/icons/eye.png";
-import play from "../assets/icons/play.png";
+import { ImageSourcePropType } from "react-native";
+
+const bookmark: ImageSourcePropType = require("../assets/icons/bookmark.png");
+const home: ImageSourcePropType = require("../assets/icons/home.png");
+const plus: ImageSourcePropType = require("../assets/icons/plus.png");
+const profile: ImageSourcePropType = require("../assets/icons/profile.png");
+const leftArrow: ImageSourcePropType = require("../assets/icons/left-arrow.png");
+const menu: ImageSourcePropType = require("../assets/icons/menu.png");
+const search: ImageSourcePropType = require("../assets/icons/search.png");
+const upload: ImageSourcePropType = require("../assets/icons/upload.png");
+const rightArrow: ImageSourcePropType = require("../assets/icons/right-arrow.png");
+const logout: ImageSourcePropType = require("../assets/icons/logout.png");
+const eyeHide: ImageSourcePropType = require("../assets/icons/eye-hide.png");
+const eye: ImageSourcePropType = require("../assets/icons/eye.png");
+const play: ImageSourcePropType = require("../assets/icons/play.png");
 
 export default {
   play,
