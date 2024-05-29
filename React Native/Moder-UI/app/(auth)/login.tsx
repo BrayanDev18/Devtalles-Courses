@@ -12,7 +12,10 @@ export default function Login() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    setFormValues((prevValues) => ({ ...prevValues, [name]: value }))
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value
+    }))
   }
 
   return (
@@ -31,7 +34,18 @@ export default function Login() {
 
           <FormField
             label='Email'
+            otherStyle='mt-7'
+            placeholder='Email adrres'
             value={formValues.email}
+            keyBoardType='email-address'
+            handleChange={handleInputChange}
+          />
+
+          <FormField
+            label='Password'
+            otherStyle='mt-7'
+            placeholder='Password'
+            value={formValues.password}
             handleChange={handleInputChange}
           />
         </View>
