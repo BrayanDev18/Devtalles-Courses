@@ -1,9 +1,15 @@
-export const ButtonAdd = ({ setCategories, categories, inputValue, setInputValue }) => {
+export const ButtonAdd = (props) => {
+  const {
+    categories,
+    inputValue,
+    setCategories,
+    setInputValue
+  } = props
 
   const addCategory = () => {
     if (categories.includes(inputValue)) return
 
-    setCategories(currentCategories => [...currentCategories, inputValue])
+    setCategories([inputValue])
     setInputValue('')
   }
 

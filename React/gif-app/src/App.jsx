@@ -1,29 +1,27 @@
-import { Fragment, useState } from "react"
-import { InputAdd } from "./components/InputAdd";
-import { ButtonAdd } from "./components/ButtonAdd";
-import { ListGifItem } from "./components/item";
+import { useState } from "react"
+import { ButtonAdd, InputAdd, ListGifs } from "./components"
 
 function GifApp() {
 
-  const [categories, setCategories] = useState(['Avatar'])
+  const [categories, setCategories] = useState([])
   const [inputValue, setInputValue] = useState('')
 
   return (
-    <div className=' bg-black h-full text-white p-[100px]'>
-      <div className="grid gap-10">
-        <h1 className="text-center text-[30px] text-[#8678F9]">Gift expert</h1>
-        <div className="flex gap-4">
-          <InputAdd {...{ inputValue, setInputValue }} />
-          <ButtonAdd {...{ setCategories, categories, inputValue, setInputValue }} />
-        </div>
-
-
-        {categories?.map((category) => (
-          <div key={category} className="flex flex-wrap gap-3 justify-center items-center">
-            <ListGifItem category={category} />
-          </div>
-        ))}
+    <div className="grid gap-10 bg-black h-full w-screen p-[100px]">
+      <h1 className="text-center text-[30px] text-[#8678F9]">Gift expert</h1>
+      <div className="flex gap-4">
+        <InputAdd {...{ inputValue, setInputValue }} />
+        <ButtonAdd
+          {...{
+            setCategories,
+            categories,
+            inputValue,
+            setInputValue
+          }}
+        />
       </div>
+
+      <ListGifs {...{ categories }} />
     </div>
   )
 }
