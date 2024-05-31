@@ -1,9 +1,10 @@
+
 function App() {
 
   return (
-    <>
-      <h1>Hooks</h1>
-    </>
+    <div className="bg-black h-screen text-white w-screen">
+      Hooks app
+    </div>
   )
 }
 
