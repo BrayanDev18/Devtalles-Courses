@@ -3,7 +3,7 @@
 import React from 'react'
 import { Fragment} from "react"
 import { podcastData } from '@/constants'
-import { PodcastCard } from '@/components/PodcastCard'
+import { PodcastCard } from '@/components/podcast/card'
 import { useQuery } from 'convex/react'
 import { api } from '@/convex/_generated/api'
 
