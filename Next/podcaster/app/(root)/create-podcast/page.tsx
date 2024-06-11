@@ -70,7 +70,7 @@ export default function CreatePodcast() {
               control={form.control}
               placeholder="BRD Pro Podcast"
             />
-            
+
             <CreatePodcastVoice
               voiceType={voiceType}
               setVoiceType={setVoiceType}
@@ -118,7 +118,7 @@ export default function CreatePodcast() {
                 {isSubmitting
                   ? (
                     <>
-                      <Loader size={20} className='animate-spin mr-2'/>
+                      <Loader size={20} className='animate-spin mr-2' />
                       loading...
                     </>
                   )
