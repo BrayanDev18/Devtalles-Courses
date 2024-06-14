@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "489fe3fc-1e9d-4623-80ed-d9e441e0bd27",
+    "userName": "Valentina",
+    "password": "$2b$10$Z5iJ.KMnjUzdgKBz4CYBcu3K1Zfwv8KP6FaOJG0SjCIgi4MzS0c0O"
+  },
+  {
+    "_id": "d84a108e-d3a4-4e11-82e0-e005bd5de406",
+    "userName": "brayan",
+    "password": "$2b$10$.diV2nfT/U0Bw5v1CRSS9.OJkst9Frg5LazMX.Uq5J1hS69oJRJbW"
+  },
+  {
+    "_id": "8bb20a7f-430f-40ba-8e93-8598640e55d2",
+    "userName": "Jeiloca",
+    "password": "$2b$10$YGd/Kw4oTkI3DYqES6PNpOJ3ekHnbExr5OWfNSs6Pb25gE/JQ70l2"
+  }
+]
