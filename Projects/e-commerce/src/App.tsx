@@ -1,12 +1,17 @@
+import { Navbar } from "./Layouts/Navbar/Navbar"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HomePage } from "./pages/Home"
 
 function App() {
-
   return (
-    <div className="h-screen w-screen bg-black text-white">
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Router>
+      <Navbar />
+      <main className="relative">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </main>
+    </Router >
   )
 }
 
