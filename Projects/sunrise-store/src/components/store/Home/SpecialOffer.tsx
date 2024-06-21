@@ -1,8 +1,8 @@
 
-import offer from "../../../../public/images/offer.svg"
-import arrowRight from "../../../../public/icons/arrow-right.svg"
 import Image from "next/image"
+import { Icon } from "@/components/common/Icon"
 import { Button } from "@/components/common/Button"
+import offer from "../../../../public/images/offer.svg"
 
 export const SpecialOffers = () => {
   return (
@@ -32,7 +32,17 @@ export const SpecialOffers = () => {
           nothing short of exceptional.
         </p>
         <div className='mt-11 flex flex-wrap gap-4'>
-          <Button label='Shop now' icon={arrowRight} />
+          <Button
+            label='Shop now'
+            to="/shp"
+            icon={
+             <Icon
+              size="22px"
+              name="bx-right-arrow-alt"
+              animation="bx-flashing"
+            />
+            }
+          />
           <Button
             label='Learn more'
             backgroundColor='bg-white'

@@ -1,5 +1,3 @@
-
-import footerLogo from '../../../../public/images/footer-logo.svg'
 import copyrightSign from '../../../../public/icons/copyright-sign.svg'
 import Image from "next/image"
 import { footerLinks, socialMedia } from '@/constants'
@@ -19,7 +17,7 @@ export const Footer = () => {
               />
             </a>
 
-            <p className='text-[25px] text-[#EF9C66] font-bold'>Sunrise</p>
+            <p className='text-[25px] text-coral-red font-bold'>Sunrise</p>
           </div>
           <p className='mt-6 text-base leading-7  text-white-400 sm:max-w-sm'>
             Get shoes ready for the new term at your nearest Nike store. Find
@@ -29,7 +27,7 @@ export const Footer = () => {
             {socialMedia.map((icon) => (
               <div
                 key={icon.alt}
-                className='flex justify-center items-center w-12 h-12 bg-white rounded-full'
+                className='flex justify-center cursor-pointer items-center w-12 h-12 bg-white rounded-full hover:bg-green-light-primary'
               >
                 <Image src={icon.src} alt={icon.alt} width={24} height={24} />
               </div>
@@ -40,14 +38,14 @@ export const Footer = () => {
         <div className='flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap'>
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className=' text-2xl leading-normal font-medium mb-6 text-white'>
+              <h4 className=' text-2xl leading-normal font-medium mb-6 text-green-light-primary'>
                 {section.title}
               </h4>
               <ul>
                 {section.links.map((link) => (
                   <li
+                  key={link.name}
                     className='mt-3 text-base leading-normal text-white-400 hover:text-slate-gray'
-                    key={link.name}
                   >
                     <a href={link.link}>{link.name}</a>
                   </li>

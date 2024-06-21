@@ -4,7 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx, css}",
   ],
   theme: {
     fontSize: {
@@ -22,6 +22,9 @@ module.exports = {
       colors: {
         'primary': "#ECEEFF",
         "coral-red": "#EF9C66",
+        "yellow-primary": "#FCDC94",
+        "green-primary": "#78ABA8",
+        "green-light-primary": "#C8CFA0",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)"
