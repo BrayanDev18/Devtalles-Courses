@@ -25,13 +25,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Providers>
+        {/* <Providers> */}
           <NavbarLayout>
             <div className="relative bg-[#f6f2eb]">
               {children}
             </div>
           </NavbarLayout>
-        </Providers>
+        {/* </Providers> */}
       </body>
     </html>
   );

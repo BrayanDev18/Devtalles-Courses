@@ -4,10 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { navLinks } from '@/constants'
 import { Icon } from '@/components/common/Icon'
-import { useSession, signOut } from 'next-auth/react'
 
 export const Navbar = () => {
-  const { data: session } = useSession()
 
   return (
     <header className='padding-x py-4 absolute z-10 w-full'>
@@ -42,23 +40,6 @@ export const Navbar = () => {
             <Icon name='bx-user' />
           </Link>
           <Icon name='bx-shopping-bag' />
-
-          {session?.user && (
-            <>
-              <div className='grid place-items-center'>
-                <Image src={session?.user?.image || ''} alt="session" width={40} height={40} className='rounded-full'/>
-                <p>{session?.user?.name}</p>
-              </div>
-              <button onClick={async () => {
-                await signOut({
-                  callbackUrl: '/',
-                })
-            
-              }}>
-                <Icon name='bx-log-out' />
-              </button>
-            </>
-          )}
         </div>
 
         <div className='hidden max-lg:block'>

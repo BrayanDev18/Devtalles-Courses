@@ -11,7 +11,6 @@ import Facebook from '../../../../public/icons/faceb.svg';
 import { Divider } from '@/components/common/Divider';
 import { UserLogin } from '@/services/auth/user';
 import { UserLoginProps } from '@/interface/user';
-import { signIn } from 'next-auth/react';
 
 export const LoginUIForm = () => {
   const InfoButtons = [
@@ -27,10 +26,13 @@ export const LoginUIForm = () => {
   } = useForm<UserLoginProps>();
 
   const onSubmit = async (data: UserLoginProps) => {
-    
-    const res = await UserLogin(data)
+    console.log(data);
 
-    console.log(res)
+    const res = await UserLogin(data)
+    console.log(res);
+    if (res) {
+      window.location.href = '/store';
+    }
   };
 
   return (
@@ -41,7 +43,7 @@ export const LoginUIForm = () => {
           <p className='text-slate-500 text-[14px] text-center'>Discover a new way to shop</p>
         </div>
 
-        <div className="flex flex-col gap-5 w-full"> 
+        <div className="flex flex-col gap-5 w-full">
           <div>
             <input
               type="email"
@@ -56,7 +58,7 @@ export const LoginUIForm = () => {
           <div>
             <input
               type="password"
-              {...register("password", { required: true, minLength: 8, maxLength: 20 })}
+              {...register("password", { required: true })}
               placeholder="Password"
               className="border-2 border-gray-300 py-2 px-4 rounded-md focus:border-coral-red focus:outline-none w-full"
             />
@@ -78,12 +80,12 @@ export const LoginUIForm = () => {
 
         <div className="flex flex-row w-full justify-center gap-2">
           {InfoButtons.map(({ label, icon }, index) => (
-            <button key={index} type="button" className="flex gap-1 items-center justify-center text-[13px] text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg  px-5 py-3" onClick={() => signIn('google', { callbackUrl: '/store'})}>
+            <button key={index} type="button" className="flex gap-1 items-center justify-center text-[13px] text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg  px-5 py-3">
               <Image src={icon} alt={label} width={17} height={16} /> {label}
             </button>
           ))}
         </div>
-        
+
         <p className='text-[14.5px] gap-2'>Don´t have an account? <Link href="/auth/register" className='text-coral-red font-semibold pl-1'>Sign up</Link></p>
       </form>
     </div>

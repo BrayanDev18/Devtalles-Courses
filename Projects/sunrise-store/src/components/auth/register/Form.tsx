@@ -21,19 +21,6 @@ export const RegisterUIForm = () => {
     { label: 'Apple ID', icon: Apple }
   ];
 
-  const { data: session } = useSession()
-
-  const fullNameUser = session?.user?.name || 'user sunrise'
-  const [firstName, lastName] = fullNameUser?.split(' ')
-
-  const [userInfo, setUserInfo] = useState({
-    firstName,
-    lastName,
-    userName: 'user sunrise',
-  })
-
-  console.log(session)
-
   const { register, handleSubmit, formState: { errors } } = useForm<UserRegisterProps>();
 
   const onSubmit = async (data: UserRegisterProps) => {
@@ -123,7 +110,7 @@ export const RegisterUIForm = () => {
 
         <div className="flex flex-row justify-center gap-2">
           {InfoButtons.map(({ label, icon }, index) => (
-            <button key={index} type="button" className="flex gap-1 items-center justify-center text-[13px] text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg  px-5 py-3" onClick={() => signIn('google', { callbackUrl: '/store' })}>
+            <button key={index} type="button" className="flex gap-1 items-center justify-center text-[13px] text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg  px-5 py-3">
               <Image src={icon} alt={label} width={17} height={16} /> {label}
             </button>
           ))}
