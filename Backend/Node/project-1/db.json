@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "92d0",
+      "title": "another prueba",
+      "views": 500
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "famous": [
+    {
+      "id": "1",
+      "title": "Goku",
+      "power": 200
+    },
+    {
+      "id": "2",
+      "title": "Naruto",
+      "power": 400
+    }
+  ]
+}

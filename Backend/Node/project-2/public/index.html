@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social media</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Social media Thinking</h1>
+  <h2>What are you thinking about?</h2>
+  <form id="postForm" onsubmit="event.preventDefault(); postData()">
+    <input type="text" id="postTitle" placeholder="Title..." class="input" required>
+    <textarea type="text" id="postBody" placeholder="Description..." class="input" required></textarea>
+    <button type="submit" class="button">
+      <span class="button-content">Send</span>
+    </button>
+  </form>
+  <ul id="postList"></ul>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

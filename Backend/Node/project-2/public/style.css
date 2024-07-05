@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #212121;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+}
+
+h1 {
+  color: rgb(99, 80, 129);
+  font-size: 18px;
+}
+
+
+form {
+  align-items: center;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 10px;
+  outline: 2px solid rgba(99, 88, 238, 1);
+  border: 0;
+  font-size: 15px;
+  background-color: #e2e2e2;
+  outline-offset: 3px;
+  padding: 10px;
+  transition: 0.25s;
+  margin-bottom: 25px;
+}
+
+.input:focus {
+  outline-offset: 5px;
+  background-color: #fff
+}
+
+.input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.postItem {
+  --color: #181818;
+  display: grid;
+  background: var(--color);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  place-items: center;
+  gap: 10px;
+}
+
+.butContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.editForm {
+  display: none;
+  margin-top: 10px;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%);
+  transition: all 0.475s;
+}
+
+.title {
+  color: rgb(99, 80, 129);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.descrip {
+  font-size: 15px;
+  color: aliceblue;
+}
